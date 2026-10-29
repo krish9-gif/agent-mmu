@@ -1,0 +1,26 @@
+[package]
+name = "agent-mmu"
+version = "0.1.0"
+edition = "2021"
+authors = ["Krish Joshi <krishjoshikrishjoshi9@gmail.com>"]
+description = "Deterministic, Cache-Pinned Memory Management Unit & Virtual Context Kernel for Autonomous AI Coding Agents"
+license = "Apache-2.0"
+repository = "https://github.com/krish9-gif/agent-mmu"
+keywords = ["ai-agents", "context-window", "memory-management", "kv-cache", "swe-bench"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+rusqlite = { version = "0.32", features = ["bundled"] }
+sha2 = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+regex = "1.10"
+
+[[bin]]
+name = "agent-mmu"
+path = "src/main.rs"
+
+[lib]
+name = "agent_mmu"
+path = "src/lib.rs"
